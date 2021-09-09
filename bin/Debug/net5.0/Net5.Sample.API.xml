@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Net5.Sample.API</name>
+    </assembly>
+    <members>
+        <member name="T:Net5.Sample.API.Controllers.ConnectController">
+            <summary>
+            Used to get JWT token for authentication
+            </summary>
+        </member>
+        <member name="M:Net5.Sample.API.Controllers.ConnectController.Authorize(Net5.Sample.API.Models.ApiCredentials)">
+            <summary>
+            Method provides a JWT Token valid for 30 minuten on providing valid credentials 
+            </summary>
+            <param name="apiCredentials">API Key and Secret</param>
+            <returns>JWT Token</returns>
+            <response code="200">JWT Token valid for 30 minutes</response>
+            <response code="401">Invalid API Credentials</response>  
+        </member>
+        <member name="T:Net5.Sample.API.Models.ApiCredentials">
+            <summary>
+            Data Model to transfer API credentials to get JWT token
+            </summary>
+        </member>
+        <member name="P:Net5.Sample.API.Models.ApiCredentials.ApiKey">
+            <summary>
+            API key
+            </summary>
+        </member>
+        <member name="P:Net5.Sample.API.Models.ApiCredentials.ApiSecret">
+            <summary>
+            API Password to validate the API Key
+            </summary>
+        </member>
+    </members>
+</doc>
